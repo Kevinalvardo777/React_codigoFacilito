@@ -17,6 +17,7 @@ const Saludo = () => {
   );
 };
 
+
 const Saludo2 = () => {
   const nombre = "Uriel";
   const idioma = "es";
