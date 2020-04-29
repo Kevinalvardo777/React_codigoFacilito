@@ -17,6 +17,12 @@ class App extends React.Component {
     this.state={
       contador : 0
     }
+
+    this.updateCounter = this.updateCounter.bind(this);
+  }
+
+  updateCounter=()=> {
+    this.setState({contador: this.state.contador + 1})
   }
 
   render(){
@@ -24,7 +30,7 @@ class App extends React.Component {
     return( 
     <>
     <p>Contador : {this.state.contador}</p>
-    <button onClick={ ()=> this.setState({contador: this.state.contador +1})}>Sumar</button>
+    <button onClick={ this.updateCounter}>Sumar</button>
     </>
     )
   }
